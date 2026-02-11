@@ -43,6 +43,7 @@ export function render(state, els) {
   // botones
   const hasErrors = errors && Object.keys(errors).length > 0;
   els.btnConvert.disabled = status === "loading" || hasErrors;
+  els.btnSwap.disabled = status === "loading" || hasErrors;
 
   // status
   els.resultBox.classList.add("hidden");

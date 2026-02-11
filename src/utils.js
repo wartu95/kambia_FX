@@ -1,4 +1,4 @@
-export const CURRENCIES = ["USD", "PEN", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "MXN"];
+export const CURRENCIES = ["USD", "BRL","EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "MXN"];
 
 export function parseAmount(value) {
   const n = Number(value);

@@ -1,0 +1,22 @@
+{
+  "name": "kambia-fx",
+  "version": "1.0.0",
+  "description": "Conversor de monedas en tiempo real con API Frankfurter",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
+    "dev": "npm run watch:css"
+  },
+  "keywords": [
+    "conversor",
+    "monedas",
+    "forex",
+    "tailwind"
+  ],
+  "author": "Junior (WartuDev)",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

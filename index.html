@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kambia FX</title>
-  <meta name="description" content="Dashboard simple para convertir tipo de cambio usando una API pública." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Kambia FX - Conversor de Monedas en Tiempo Real</title>
+  <meta name="title" content="Kambia FX - Conversor de Monedas en Tiempo Real" />
+  <meta name="description" content="Convierte monedas de manera rápida y precisa. Consulta tasas de cambio actualizadas entre más de 30 divisas internacionales con nuestra herramienta gratuita." />
+  <meta name="keywords" content="conversor de monedas, cambio de divisas, tipos de cambio, USD, EUR, convertidor forex, tasas de cambio en tiempo real" />
+  <meta name="author" content="Junior (WartuDev)" />
+  <meta name="theme-color" content="#10b981" />
+  
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://wartu95.github.io/kambia_FX/" />
+  <meta property="twitter:title" content="Kambia FX - Conversor de Monedas en Tiempo Real" />
+  <meta property="twitter:description" content="Convierte monedas de manera rápida y precisa. Consulta tasas de cambio actualizadas entre más de 30 divisas internacionales." />
+  
+  <link rel="icon" href="./assets/img/Icon_KambiaFX.png" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body class="bg-emerald-50 text-slate-900 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-r from-teal-200 to-teal-500 to-cyan-200 transition-colors duration-500 text-slate-900 min-h-screen flex items-center justify-center p-4">
   <main class="w-full max-w-xl">
-    <section class="bg-gray-100 rounded-2xl shadow-lg p-6">
-      <header class="mb-6">
-        <h1 class="text-2xl font-bold">Kambia FX</h1>
+    <section class="bg-gray-100 bg-opacity-50 border border-gray-200 rounded-2xl shadow-lg p-6">
+      <header class="mb-4 text-center">
+        <img src="./assets/img/Logo-Kambia-FX.webp" alt="Kambia FX Logo" class="mx-auto w-48 h-48 mb-1" />
         <p class="text-slate-600 mt-1">Consulta tasas de cambio en tiempo real y convierte entre diferentes monedas de forma rápida y precisa.</p>
       </header>
 
@@ -43,14 +57,20 @@
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <button id="btnConvert" type="submit"
-            class="rounded-lg px-4 py-2 font-semibold text-white bg-slate-900 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed">
+            class="rounded-lg px-4 py-2 font-semibold text-white bg-slate-600 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
             Convertir
           </button>
 
           <button id="btnSwap" type="button"
-            class="rounded-lg px-4 py-2 font-semibold border border-slate-300 hover:bg-slate-100">
+            class="rounded-lg px-4 py-2 font-semibold border border-slate-300 hover:bg-slate-100 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+            </svg>
             Invertir
           </button>
         </div>
@@ -67,8 +87,17 @@
         </div>
       </form>
 
-      <footer class="mt-6 text-xs text-slate-500">
-        Fuente de tasas: Frankfurter. API pública gratuita para tipos de cambio. <a href="https://www.frankfurter.app/" class="underline hover:text-slate-700">Más info</a>.
+      <footer class="mt-6 pt-4  flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-xs text-slate-500">
+          Fuente de tasas: Frankfurter. API pública gratuita para tipos de cambio. <a href="https://www.frankfurter.app/" class="underline hover:text-slate-700">Más info</a>.
+        </p>
+        <a href="https://github.com/wartu95/kambia_FX" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center gap-2 text-slate-700 hover:text-slate-900 transition-colors" 
+           title="Ver proyecto en GitHub">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
       </footer>
     </section>
   </main>
